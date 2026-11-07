@@ -8,7 +8,7 @@ import { Features } from "lightningcss";
 
 export default defineConfig({
 	output: "server",
-	adapter: cloudflare(),
+	adapter: cloudflare({ assets: { binding: "STATIC_ASSETS" } }),
 	image: {
 		layout: "constrained",
 		responsiveStyles: true,

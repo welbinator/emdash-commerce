@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "postbuild": "node -e \"const fs=require('fs');const c=JSON.parse(fs.readFileSync('dist/server/wrangler.json','utf8'));if(c.assets)c.assets.binding='SITE_ASSETS';fs.writeFileSync('dist/server/wrangler.json',JSON.stringify(c));console.log('Patched ASSETS binding')\"",
     "preview": "astro preview",
     "typecheck": "astro check"
   },
