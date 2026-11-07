@@ -16,8 +16,5 @@
       "binding": "MEDIA",
       "bucket_name": "emdash-commerce-media"
     }
-  ],
-  "triggers": {
-    "crons": ["* * * * *"]
-  }
+  ]
 }
