@@ -1,0 +1,29 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "emdash-commerce",
+	"main": "./src/worker.ts",
+	"compatibility_date": "2026-02-24",
+	"compatibility_flags": ["nodejs_compat"],
+	"kv_namespaces": [
+		{
+			"binding": "SESSION",
+			"id": "b305cdb994ee4ea5a26d7f17c3e37db1",
+		},
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "emdash-commerce-db",
+			"database_id": "76d10832-e5f3-42e7-8da7-4422d1cdb51f",
+		},
+	],
+	"r2_buckets": [
+		{
+			"binding": "MEDIA",
+			"bucket_name": "emdash-commerce-media",
+		},
+	],
+	"triggers": {
+		"crons": ["* * * * *"],
+	},
+}
